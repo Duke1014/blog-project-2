@@ -5,4 +5,12 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :users, :blogs
+
+  # USERS
+  get "/me", to: "users#show"
+  post "/signup", to: "users#create"
+
+  # BLOGS
+  post "/blogs", to: "blogs#create"
+
 end
