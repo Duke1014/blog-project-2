@@ -1,7 +1,14 @@
 class BlogsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
-    
+
     # GET
+    def index
+        @blogs = Blog.all
+    end
+
+    def show
+        
+    end
 
     # POST 
     def create
