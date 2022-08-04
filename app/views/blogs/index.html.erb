@@ -1,9 +1,10 @@
 <h1> Hello, world <h1>
 
 <ul>
-    <% @blogs.each do [b] %>
-    <li>
-        <h2><% b.title %></h2>
-        <p><% b.content %> </p>
-    </li>
+    <% @blogs.each do |blog| %>
+        <li>
+            <%= blog.title %>
+            <p><%= blog.content %><p>
+        </li>
+    <% end %>
 </ul>

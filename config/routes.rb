@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  root "blogs#index"
 
-  resources :users, :blogs
+  resources :users, :blogs, :comments
 
   # USERS
   get "/me", to: "users#show"
@@ -12,5 +12,7 @@ Rails.application.routes.draw do
 
   # BLOGS
   post "/blogs", to: "blogs#create"
+  get '/blogs', to: "blogs#index"
+  get '/blogs/:id', to: "blogs#show"
 
 end
