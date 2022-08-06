@@ -1,10 +1,12 @@
 <h1> Hello, world <h1>
 
 <ul>
+<%= paginate @blogs %>
     <% @blogs.each do |blog| %>
         <li>
             <%= blog.title %>
             <p><%= blog.content %><p>
+            <%= blog.published_on %>
         </li>
     <% end %>
 </ul>

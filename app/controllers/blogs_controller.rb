@@ -3,11 +3,11 @@ class BlogsController < ApplicationController
 
     # GET
     def index
-        @blogs = Blog.all
+        @blogs = Blog.order(published_on: :desc).page params[:page]
     end
 
     def show
-        
+
     end
 
     # POST 
